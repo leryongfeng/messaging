@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Spring Boot 3.x Parent -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.example.messaging</groupId>
+    <artifactId>messaging-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- Crucial: Packaging must be 'pom' for the root module -->
+    <packaging>pom</packaging>
+
+    <name>messaging-parent</name>
+    <description>Brokerless Messaging Framework</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!-- Registers your sub-modules -->
+    <modules>
+        <module>framework-core</module>
+        <module>framework-impl-rdbms</module>
+        <module>sample-app-main</module>
+    </modules>
+
+</project>
