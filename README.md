@@ -20,8 +20,7 @@ It provides reliable, at-least-once message delivery, webhook processing, and as
 
 ## 2. Architecture Overview
 
-### 2.1 Interface-Driven Abstraction (Mermaid Flowchart)
-
+### 2.1 Interface-Driven Abstraction
 ```mermaid
 graph TD
     subgraph "1. Application Domain"
@@ -54,14 +53,14 @@ graph TD
         Router -->|Strategy Pattern| H3[Domain Specific Handlers]
     end
 
-    classDef core fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef spi fill:#fff3e0,stroke:#e65100,stroke-width:2px;
-    classDef impl fill:#f3e5f5,stroke:#4a148c,stroke-width:2px;
-    
-    class Biz,Ingress,H1,H2,H3 core;
+%% Dark Mode Optimized Styles
+    classDef core fill:#0D47A1,stroke:#64B5F6,stroke-width:2px,color:#FFFFFF;
+    classDef spi fill:#E65100,stroke:#FFB74D,stroke-width:2px,color:#FFFFFF;
+    classDef impl fill:#4A148C,stroke:#BA68C8,stroke-width:2px,color:#FFFFFF;
+
+    class Biz,Ingress,H1,H2,H3,DomainEvent,RawPayload core;
     class Publisher,Router spi;
     class RdbmsStore,MongoStore,RabbitMq,RdbmsConsumer,MongoConsumer,RabbitConsumer impl;
-
 ```
 
 ---
